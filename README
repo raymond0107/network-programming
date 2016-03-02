@@ -1,0 +1,35 @@
+NAME:
+LUZHEN QIAN
+
+USC ID:
+2239838133
+
+HOW TO RUN THE FILES:
+Take serverA.c as an example:
+gcc -o serverA serverA.c -lsocket -lnsl -lresolv
+./serverA
+
+Should run client first and then DO RUN serverA, serverB, serverC, serverD IN ORDER.
+
+File List:
+------------
+client.c		client side implementation. receive the information from the servers and calculate the topology and then send it to every server. finally, calculate the MST of the network.
+
+serverA.c       serverA side implementation. read serverA.txt and send the information to the client. finally receive the topology of the network from the client.
+
+serverB.c       serverB side implementation. read serverB.txt and send the information to the client. finally receive the topology of the network from the client.
+
+serverC.c       serverC side implementation. read serverC.txt and send the information to the client. finally receive the topology of the network from the client.
+
+serverD.c       serverD side implementation. read serverD.txt and send the information to the client. finally receive the topology of the network from the client.
+
+5 files
+
+
+Main function
+----------
+For every server, read the file of themselves at first, and store the information using a char point, then as the socket programming discusses, sent the information to the client,  atfer the client calculate the topology of the network, the server receive the topology.
+
+For client, wait for the server connection, and then receive every server's information of neighbor. And then deal with the data using strtok() function and store the server name and corresponding path cost. Then calculate the topology and store the topology into a char point and send it to every server. Finally, calculate the MST of the topology.
+
+
