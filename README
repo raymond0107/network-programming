@@ -1,9 +1,3 @@
-NAME:
-LUZHEN QIAN
-
-USC ID:
-2239838133
-
 HOW TO RUN THE FILES:
 Take serverA.c as an example:
 gcc -o serverA serverA.c -lsocket -lnsl -lresolv
